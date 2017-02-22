@@ -10,6 +10,8 @@
     "ionic:serve": "ionic-app-scripts serve"
   },
   "dependencies": {
+    "express" : "^4.10.6",
+    "mysql" : "^2.5.4",
     "@angular/common": "2.2.1",
     "@angular/compiler": "2.2.1",
     "@angular/compiler-cli": "2.2.1",
