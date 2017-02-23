@@ -1,3 +1,5 @@
+<script type="text/javascript" src="app.js"></script>
+
 <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
@@ -7,16 +9,30 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content ng-app="app" ng-controller="testController">
   <ion-list>
-<!--    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+    <ion-item ng-repeat="category in categories">
+      {{category.c_name}}
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<!--
+<ion-content>
+
+
+
+  <ion-list>
+    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
       <ion-icon [name]="item.icon" item-left></ion-icon>
       {{item.title}}
       <div class="item-note" item-right>
         {{item.note}}
       </div>
     </button>
-  -->
+-->
+
+<!--
 
   <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
         <ion-icon [name]="item.icon" item-left></ion-icon>
@@ -25,9 +41,12 @@
           {{category.club_desc}}
         </div>
       </button>
-
   </ion-list>
+
+
+
   <div *ngIf="selectedItem" padding>
     You navigated here from <b>{{selectedItem.title}}</b>
   </div>
 </ion-content>
+-->
